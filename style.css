@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    /* todos os links sem sublinhado */
+}
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+    margin: 0;
+}
+
+
+/******************************************************************* layout colunas */
+
+.col-1,
+.col-2 {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.col-2 {
+    width: 80%;
+}
+
+.container {
+    /*background-color: #D6E9FE;*/
+    overflow: hidden;
+}
+
+
+/*********************************************************************** header*/
+
+header,
+footer {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+}
+
+footer {
+    padding: 0px 25px 0px 36px;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    margin-top: 20px;
+}
+
+p {
+    padding: 10px 0 0 480px;
+}
+
+footer p {
+    color: white;
+    float: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 145px;
+    height: 145px;
+    text-align: center;
+    color: red;
+    font-size: 40px;
+}
+
+header h1 {
+    position: relative;
+    padding-left: 20px;
+    text-shadow: 2px 0 2px #000;
+    color: #eee;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+}
+
+#imagem1 {
+    float: left;
+    width: 40%;
+    max-width: 340px;
+    min-width: 250px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+}
+
+
+/********************************************************************************* queries **/
+
+@media only screen and (min-width: 600px) {
+    /* para tablets: */
+    .col-1 {
+        width: 30%;
+    }
+    .col-2 {
+        width: 70%;
+    }
+    footer {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    /* para desktop: */
+    .col-1 {
+        width: 20%;
+    }
+    .col-2 {
+        width: 60%;
+    }
+}
